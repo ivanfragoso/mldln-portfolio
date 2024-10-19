@@ -12,6 +12,10 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        editorial: ['var(--font-pp-editorial-old)'],
+        blurweb: ['var(--font-blur-web)'],
+      },
     },
   },
   plugins: [],
