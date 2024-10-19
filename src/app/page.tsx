@@ -8,10 +8,7 @@ export default function Home() {
         <div className="absolute top-0 left-0 right-0 mt-[70px] ml-[25px]">
           <h1 className="text-6xl text-primary font-editorial">López de la Nieta</h1>
           <h2 className="text-6xl text-low uppercase -mt-5">Graphic Designer</h2>
-          <h3 className="text-5xl text-low uppercase">
-            Specializing in Branding &amp;<br />
-            Visual Identity
-          </h3>
+          <h3 className="text-5xl text-low uppercase">Specializing in Branding & Visual Identity</h3>
         </div>
         <video
           src="/home_video.mp4"
