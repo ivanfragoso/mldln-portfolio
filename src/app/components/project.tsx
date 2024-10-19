@@ -21,7 +21,7 @@ export default function Project({
   secondLineTags,
 }: ProjectProps) {
   return (
-    <div className="flex flex-col items-center gap-9">
+    <div className="flex flex-col items-center gap-9 cursor-pointer">
       <div className="text-center relative">
         <h2 className="text-5xl font-editorial">({number})</h2>
         <h2 className="text-5xl text-primary font-bold uppercase -mt-5">
