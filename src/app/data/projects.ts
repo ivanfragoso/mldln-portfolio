@@ -15,8 +15,8 @@ export const projects = [
             { text: "Posters", margin: "m-0" }
         ],
         secondLineTags: [
-            { text: "Art Direction", margin: "m-0" },
-            { text: "Methodology", margin: "m-0" }
+            { text: "Art Direction", margin: "ml-[7px]" },
+            { text: "Methodology", margin: "mr-[19px]" }
         ]
     },
     {
@@ -29,7 +29,7 @@ export const projects = [
         ],
         secondLineTags: [
             { text: "Packaging", margin: "m-0" },
-            { text: "History of Interiorism", margin: "m-0" }
+            { text: "History of Interiorism", margin: "mr-[15px]" }
         ]
     },
     {
@@ -38,10 +38,10 @@ export const projects = [
         image: gorgiImage,
         firstLineTags: [
             { text: "Wine Label", margin: "m-0" },
-            { text: "Illustration", margin: "m-0" }
+            { text: "Illustration", margin: "mr-[44px]" }
         ],
         secondLineTags: [
-            { text: "Art Direction", margin: "m-0" },
+            { text: "Art Direction", margin: "ml-[12px]" },
             { text: "Brand Identity", margin: "m-0" }
         ]
     },
@@ -50,12 +50,12 @@ export const projects = [
         title: "La 111",
         image: la111Image,
         firstLineTags: [
-            { text: "Wine Label", margin: "m-0" },
-            { text: "Illustration", margin: "m-0" }
+            { text: "Brand Identity", margin: "m-0" },
+            { text: "Social Media", margin: "m-0" }
         ],
         secondLineTags: [
-            { text: "Art Direction", margin: "m-0" },
-            { text: "Brand Identity", margin: "m-0" }
+            { text: "Art Direction", margin: "ml-[63px]" },
+            { text: "UX/UI Design", margin: "mr-[30px]" }
         ]
     },
     {
@@ -76,12 +76,12 @@ export const projects = [
         title: "Aetheria",
         image: aetheriaImage,
         firstLineTags: [
-            { text: "Wine Label", margin: "m-0" },
-            { text: "Illustration", margin: "m-0" }
+            { text: "Packaging", margin: "ml-[23px]" },
+            { text: "Brand Identity", margin: "m-0" }
         ],
         secondLineTags: [
-            { text: "Art Direction", margin: "m-0" },
-            { text: "Brand Identity", margin: "m-0" }
+            { text: "Material Experimentation", margin: "m-0" },
+            { text: "Dystopia", margin: "mr-[24px]" }
         ]
     }
 ]
