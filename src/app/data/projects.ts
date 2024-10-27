@@ -1,9 +1,9 @@
-import rogeImage from '@/app/images/roge.jpeg';
-import leSilleImage from '@/app/images/le_sille.jpeg';
-import gorgiImage from '@/app/images/gorgi.jpeg';
-import la111Image from '@/app/images/la111.jpeg';
-import lewisImage from '@/app/images/lewis.jpeg';
-import aetheriaImage from '@/app/images/aetheria.jpeg';
+import rogeImage from '@/app/images/roge/roge_cover.jpg';
+import leSilleImage from '@/app/images/le_sille/le_sille_cover.jpg';
+import gorgiImage from '@/app/images/gorgi/gorgi_cover.jpg';
+import la111Image from '@/app/images/la111/la111_cover.jpg';
+import cigarretesImage from '@/app/images/cigarrettes/cigarrettes_cover.jpg';
+import aetheriaImage from '@/app/images/aetheria/aetheria_cover.jpg';
 
 export const projects = [
     {
@@ -60,15 +60,15 @@ export const projects = [
     },
     {
         number: "05",
-        title: "Lewis",
-        image: lewisImage,
+        title: "Cigarrettes",
+        image: cigarretesImage,
         firstLineTags: [
-            { text: "Wine Label", margin: "m-0" },
-            { text: "Illustration", margin: "m-0" }
+            { text: "Rotoscoping", margin: "m-0" },
+            { text: "Audiovisual", margin: "mr-[39px]" }
         ],
         secondLineTags: [
-            { text: "Art Direction", margin: "m-0" },
-            { text: "Brand Identity", margin: "m-0" }
+            { text: "Teaser Videoclip", margin: "ml-[13px]" },
+            { text: "Methods", margin: "mr-[30px]" }
         ]
     },
     {
