@@ -22,3 +22,25 @@ body, html {
     text-wrap: balance;
   }
 }
+
+.bounce {
+  position: absolute;
+  animation: bounce 500ms forwards;
+}
+
+.bounce-out {
+  position: absolute;
+  animation: bounce-out 500ms forwards;
+}
+
+@keyframes bounce {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(50px); }
+  100% { transform: translateX(-100vw); }
+}
+
+@keyframes bounce-out {
+  0% { transform: translateX(-100vw); }
+  30% { transform: translateX(50px); }
+  100% { transform: translateX(0); }
+}
