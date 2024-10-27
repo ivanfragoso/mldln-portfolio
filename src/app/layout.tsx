@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const PPEditorialOld = localFont({
-  src: "./fonts/PPEditorialOld-Italic.woff",
-  variable: "--font-pp-editorial-old",
+const PPEditorialNew = localFont({
+  src: "./fonts/PPEditorialNew-Italic.woff2",
+  variable: "--font-pp-editorial-new",
   weight: "400",
 });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${PPEditorialOld.variable} ${BlurWeb.className} antialiased max-w-[1440px] mx-auto overflow-x-hidden`}
+        className={`${PPEditorialNew.variable} ${BlurWeb.className} antialiased max-w-[1440px] mx-auto overflow-x-hidden`}
       >
         {children}
       </body>

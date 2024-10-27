@@ -16,7 +16,7 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        editorial: ['var(--font-pp-editorial-old)'],
+        editorial: ['var(--font-pp-editorial-new)'],
         blurweb: ['var(--font-blur-web)'],
       },
     },
