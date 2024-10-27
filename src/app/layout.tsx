@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${PPEditorialOld.variable} ${BlurWeb.className} antialiased max-w-7xl mx-auto`}
+        className={`${PPEditorialOld.variable} ${BlurWeb.className} antialiased max-w-[1440px] mx-auto overflow-x-hidden`}
       >
         {children}
       </body>
