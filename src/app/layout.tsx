@@ -3,14 +3,24 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const PPEditorialNew = localFont({
-  src: "./fonts/PPEditorialNew-Italic.woff2",
-  variable: "--font-pp-editorial-new",
+  src: [
+    {
+      path: "./fonts/PPEditorialNew-Regular.woff2",
+      weight: "400",
+      style: "normal"
+    },
+    {
+      path: "./fonts/PPEditorialNew-Italic.woff2",
   weight: "400",
+      style: "italic"
+    }
+  ]
 });
 
 const BlurWeb = localFont({
   src: "./fonts/BlurWeb-Medium.otf",
   weight: "500",
+  variable: "--font-blur-web",
 });
 
 export const metadata: Metadata = {
