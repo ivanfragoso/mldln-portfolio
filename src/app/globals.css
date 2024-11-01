@@ -44,3 +44,7 @@ body, html {
   30% { transform: translateX(50px); }
   100% { transform: translateX(0); }
 }
+
+.slick-dots li button:before {
+  color: white !important;
+}
