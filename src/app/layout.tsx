@@ -11,7 +11,7 @@ const PPEditorialNew = localFont({
     },
     {
       path: "./fonts/PPEditorialNew-Italic.woff2",
-  weight: "400",
+      weight: "400",
       style: "italic"
     }
   ]
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${PPEditorialNew.variable} ${BlurWeb.className} antialiased max-w-[1280px] mx-auto overflow-x-hidden`}
+        className={`${BlurWeb.variable} ${PPEditorialNew.className} antialiased max-w-[1280px] mx-auto overflow-hidden relative`}
       >
         {children}
       </body>

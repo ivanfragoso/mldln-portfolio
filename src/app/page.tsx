@@ -13,7 +13,7 @@ export default function Home() {
       <div className={`h-full flex ${animateBg ? "bounce" : "bounce-out"} bg-background`}>
         <div className="w-[712px] h-full sticky top-0">
           <div className="absolute top-0 left-0 right-0 mt-[70px] ml-[25px]">
-              <h1 className="text-6xl text-primary">López de la Nieta</h1>
+              <h1 className="text-6xl text-primary italic">López de la Nieta</h1>
               <h2 className="text-6xl text-low uppercase -mt-5 font-blurweb">Graphic Designer</h2>
               <h3 className="text-5xl text-low uppercase font-blurweb">Specializing in Branding & Visual Identity</h3>
           </div>

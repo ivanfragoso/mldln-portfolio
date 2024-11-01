@@ -32,7 +32,7 @@ export default function Project({
       </div>
       <div className="relative cursor-pointer">
         <div className="absolute flex items-center justify-center w-full h-full bg-secondary/20 opacity-0 hover:opacity-100">
-          <span className="text-base text-white uppercase" onClick={imageClick}>( View project )</span>
+          <span className="text-base text-white uppercase font-blurweb" onClick={imageClick}>( View project )</span>
         </div>
         <Image src={image} alt={title} width={410} height={333} priority />
       </div>
