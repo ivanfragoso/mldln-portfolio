@@ -9,7 +9,7 @@ export const projects = [
     {
         number: "01",
         title: "Roge's Bakery",
-        image: rogeImage,
+        image: "/roge/roge_cover.jpg",
         firstLineTags: [
             { text: "Brand Identity - Branding", margin: "m-0" },
             { text: "Posters", margin: "m-0" }
@@ -22,7 +22,7 @@ export const projects = [
     {
         number: "02",
         title: "LeSille",
-        image: leSilleImage,
+        image: "/le_sille/le_sille_cover.jpg",
         firstLineTags: [
             { text: "Card Game - Educative", margin: "m-0" },
             { text: "Illustration", margin: "m-0" }
@@ -35,7 +35,7 @@ export const projects = [
     {
         number: "03",
         title: "Gorgi",
-        image: gorgiImage,
+        image: "/gorgi/gorgi_cover.jpg",
         firstLineTags: [
             { text: "Wine Label", margin: "m-0" },
             { text: "Illustration", margin: "mr-[44px]" }
@@ -48,7 +48,7 @@ export const projects = [
     {
         number: "04",
         title: "La 111",
-        image: la111Image,
+        image: "/la_111/la_111_cover.jpg",
         firstLineTags: [
             { text: "Brand Identity", margin: "m-0" },
             { text: "Social Media", margin: "m-0" }
@@ -61,7 +61,7 @@ export const projects = [
     {
         number: "05",
         title: "Cigarrettes",
-        image: cigarretesImage,
+        image: "/cigarrettes/cigarrettes_cover.jpg",
         firstLineTags: [
             { text: "Rotoscoping", margin: "m-0" },
             { text: "Audiovisual", margin: "mr-[39px]" }
@@ -74,7 +74,7 @@ export const projects = [
     {
         number: "06",
         title: "Aetheria",
-        image: aetheriaImage,
+        image: "/aetheria/aetheria_cover.jpg",
         firstLineTags: [
             { text: "Packaging", margin: "ml-[23px]" },
             { text: "Brand Identity", margin: "m-0" }
