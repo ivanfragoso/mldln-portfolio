@@ -43,7 +43,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
                     key={index}
                     src={item.src}
                     width={800}
-                    style={{ height: '100vh', objectFit: 'cover' }}
+                    style={{ height: '100vh' }}
                     autoPlay
                     muted
                     loop
