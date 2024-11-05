@@ -25,7 +25,7 @@ export default function Project({
   return (
     <div className="flex flex-col items-center gap-[16px] z-10">
       <div className="text-center relative">
-        <h2 className="text-5xl italic">({number})</h2>
+        <h2 className="text-5xl font-editorialNew italic">({number})</h2>
         <h2 className="text-5xl text-primary uppercase -mt-4 font-blurweb">
           {title}
         </h2>
@@ -55,17 +55,3 @@ export default function Project({
     </div>
   );
 }
-
-
-
-
-
-    /*}
-    <div
-      className={`absolute top-0 w-full h-full bg-white z-10 ${
-        animateBg ? "bg-animate-in" : "bg-animate-out"
-      }`}
-    >
-      <h3 className="float-right mr-6 text-lg font-editorial mt-5 cursor-pointer" onClick={handleClick}>Back</h3>
-    </div>
-    */
