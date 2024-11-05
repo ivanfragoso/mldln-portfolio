@@ -2,7 +2,28 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+const PPNeueMontreal = localFont({
+  src: [
+    {
+      path: "./fonts/PPNeueMontreal-Regular.woff2",
+      weight: "400",
+      style: "normal"
+    },
+    {
+      path: "./fonts/PPNeueMontreal-Medium.woff2",
+      weight: "500",
+      style: "normal"
+    },
+    {
+      path: "./fonts/PPNeueMontreal-Bold.woff2",
+      weight: "700",
+      style: "normal"
+    }
+  ]
+});
+
 const PPEditorialNew = localFont({
+  variable: "--font-editorial-new",
   src: [
     {
       path: "./fonts/PPEditorialNew-Regular.woff2",
@@ -36,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${BlurWeb.variable} ${PPEditorialNew.className} antialiased max-w-[1280px] mx-auto overflow-hidden relative`}
+        className={`${BlurWeb.variable} ${PPEditorialNew.variable} ${PPNeueMontreal.className} antialiased max-w-[1280px] mx-auto overflow-hidden relative`}
       >
         {children}
       </body>

@@ -17,6 +17,7 @@ const config: Config = {
       },
       fontFamily: {
         blurweb: ['var(--font-blur-web)'],
+        editorialNew: ['var(--font-editorial-new)'],
       },
     },
   },

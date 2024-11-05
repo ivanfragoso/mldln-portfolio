@@ -22,8 +22,8 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
 
   return (
     <section className="h-full">
-      <h3 className="italic float-right mr-6 text-lg mt-5 cursor-pointer" onClick={backClick}>Back</h3>
-      <div className="h-full flex items-center">
+      <h3 className="float-right mr-6 text-lg mt-5 font-editorialNew italic cursor-pointer" onClick={backClick}>Back</h3>
+      <div className="h-full flex">
         <div className="w-[800px] h-full relative">
           <Slider {...settings}>
             {sliderItems.map((item, index) => (
@@ -53,7 +53,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
             ))}
           </Slider>
         </div>
-        <div className="w-[640px]">
+        <div className="w-[640px] py-[90px] px-[30px]">
           {<div dangerouslySetInnerHTML={{ __html: description }} />}
         </div>
       </div>

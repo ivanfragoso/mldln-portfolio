@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer className="flex px-5 mb-16">
             <div className="flex flex-col justify-center">
-                <h3 className="text-[2rem] italic text-primary mb-3.5 leading-8">Marta López de la Nieta</h3>
+                <h3 className="font-editorialNew text-[2rem] italic text-primary mb-3.5 leading-8">Marta López de la Nieta</h3>
                 <p className="text-[0.5rem]">Este portfolio se presenta con fines educativos y no comerciales. Todos los derechos pertenecen a sus respectivos autores.</p>
             </div>
             <div className="flex flex-col items-end justify-start pb-3">

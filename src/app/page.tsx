@@ -14,7 +14,7 @@ export default function Home() {
       <div className={`h-full flex ${animateBg ? "bounce" : "bounce-out"} bg-background z-20`}>
         <div className="w-[712px] h-full sticky top-0">
           <div className="absolute bottom-0 left-0 right-0 mb-[50px] ml-[25px]">
-              <h1 className="text-6xl text-primary italic">López de la Nieta</h1>
+            <h1 className="text-6xl text-primary font-editorialNew italic">López de la Nieta</h1>
               <h2 className="text-6xl text-low uppercase -mt-5 font-blurweb">Graphic Designer</h2>
               <h3 className="text-5xl text-low uppercase font-blurweb">Specializing in Branding & Visual Identity</h3>
           </div>
@@ -27,7 +27,7 @@ export default function Home() {
           />
         </div>
         <div className="w-[568px] ml-auto h-full overflow-y-scroll">
-            <h3 className="float-right mr-6 text-lg mt-5 italic">Work</h3>
+          <h3 className="float-right mr-6 text-lg mt-5 font-editorialNew italic">Work</h3>
           <div className="flex flex-col gap-[80px] px-[80px] mt-16 mb-[190px]">
             {projects.map((project) => (
               <Project key={project.number} {...project} imageClick={() => setAnimateBg((animateBg) => !animateBg)}/>
