@@ -1,13 +1,13 @@
 export default function Footer() {
     return (
-        <footer className="w-full h-[242px] flex flex-col items-start justify-center bg-background sticky bottom-0 z-30">
-            <div className="flex flex-col justify-center flex-grow">
-                <h3 className="text-5xl italic text-primary text-[64px] ml-[22px]">Marta López de la Nieta</h3>
-                <h3 className="text-5xl uppercase text-[64px] -mt-10 font-blurweb">Hit Me Up!</h3>
+        <footer className="flex px-5 mb-16">
+            <div className="flex flex-col justify-center">
+                <h3 className="text-[2rem] italic text-primary mb-3.5 leading-8">Marta López de la Nieta</h3>
+                <p className="text-[0.5rem]">Este portfolio se presenta con fines educativos y no comerciales. Todos los derechos pertenecen a sus respectivos autores.</p>
             </div>
-            <div className="flex items-center justify-between w-full mt-auto pb-3">
-                <p className="text-xs">Este portfolio se presenta con fines educativos y no comerciales. Todos los derechos de autor pertenecen a sus respectivos autores.</p>
-                <a href="mailto:iH2Dg@example.com" className="text-2xl italic">marta.00.design@gmail.com</a>
+            <div className="flex flex-col items-end justify-start pb-3">
+                <a href="mailto:marta.00.design@gmail.com" className="text-[1.75rem] uppercase font-blurweb leading-8">Hit Me Up!</a>
+                <a href="mailto:marta.00.design@gmail.com" className="text-xs font-blurweb">marta.00.design@gmail.com</a>
             </div>
         </footer>
     )
