@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   const [animateBg, setAnimateBg] = useState(false);
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
   return (
     <main className="h-screen w-full">
@@ -26,17 +27,25 @@ export default function Home() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="w-[568px] ml-auto h-full overflow-y-scroll">
+        <div className="w-[568px] ml-auto h-full overflow-y-scroll z-30">
           <h3 className="float-right mr-6 text-lg mt-5 font-editorialNew italic">Work</h3>
           <div className="flex flex-col gap-[80px] px-[80px] mt-16 mb-[190px]">
-            {projects.map((project) => (
-              <Project key={project.number} {...project} imageClick={() => setAnimateBg((animateBg) => !animateBg)}/>
+            {projects.map((project, idx) => (
+              <Project key={project.number} {...project} imageClick={() => { setAnimateBg((animateBg) => !animateBg); setSelectedProjectIndex(idx)}} />
             ))}
           </div>
-          <Footer></Footer>
+          <Footer />
         </div>
       </div>
       { animateBg && <ProjectDetail backClick={() => setAnimateBg((animateBg) => !animateBg)} /> }
+
+      {animateBg && (
+        <ProjectDetail
+          sliderItems={projects[selectedProjectIndex].sliderItems}
+          backClick={() => setAnimateBg((animateBg) => !animateBg)}
+          description={projects[selectedProjectIndex].description}
+        />
+      )}
     </main>
   );
 }

@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
 interface ProjectDetailProps {
-  sliderItems: { type: 'image', src: string }[] | { type: 'video', src: string }[]
+  sliderItems: { type: string, src: string }[]
   description: string
   backClick: () => void;
 }
@@ -22,9 +22,9 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
 
   return (
     <section className="h-full">
-      <h3 className="float-right mr-6 text-lg mt-5 font-editorialNew italic cursor-pointer" onClick={backClick}>Back</h3>
+      <h3 className="float-right mr-6 text-lg mt-5 font-editorialNew italic cursor-pointer" onClick={backClick}>(more)</h3>
       <div className="h-full flex">
-        <div className="w-[800px] h-full relative">
+        <div className="w-[640px] h-full relative">
           <Slider {...settings}>
             {sliderItems.map((item, index) => (
               <div key={index} className="h-full">
@@ -53,7 +53,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
             ))}
           </Slider>
         </div>
-        <div className="w-[640px] py-[90px] px-[30px]">
+        <div className="w-[640px] py-5 px-[30px]">
           {<div dangerouslySetInnerHTML={{ __html: description }} />}
         </div>
       </div>

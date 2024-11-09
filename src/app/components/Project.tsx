@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface TagProps {
   text: string;
@@ -8,7 +8,7 @@ interface TagProps {
 interface ProjectProps {
   number: string; // it contains a zero before
   title: string;
-  image: StaticImageData;
+  image: string;
   firstLineTags: TagProps[];
   secondLineTags: TagProps[];
   imageClick: () => void;
