@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import { useRef, useState } from "react";
 
 interface ProjectDetailProps {
   sliderItems: { type: string, src: string }[]
@@ -10,6 +11,9 @@ interface ProjectDetailProps {
 }
 
 export default function ProjectDetail({ backClick, sliderItems, description }: ProjectDetailProps) {
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [mutedStates, setMutedStates] = useState<boolean[]>(sliderItems.map(() => true));
+
   const settings = {
     dots: true,
     dotsClass: 'slick-dots !bottom-4',
@@ -18,7 +22,17 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1
-  };
+  }
+
+  const handleToggleMute = (index: number) => {
+    const newMutedStates = [...mutedStates];
+    newMutedStates[index] = !newMutedStates[index];
+    setMutedStates(newMutedStates);
+  
+    if (videoRefs.current[index]) {
+      videoRefs.current[index]!.muted = newMutedStates[index];
+    }
+  }  
 
   return (
     <section className="h-full">
@@ -38,16 +52,29 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
                     style={{ height: '100vh', objectFit: 'cover' }}
                     priority
                   />
-                ) : item.type === 'video' ? (
-                  <video
-                    key={index}
-                    src={item.src}
-                    width={800}
-                    style={{ height: '100vh' }}
-                    autoPlay
-                    muted
-                    loop
-                  />
+                ) : item.type === 'video' || item.type === 'video_no_sound' ? (
+                  <div className="relative h-screen flex flex-col justify-center gap-2 items-end">
+                    <video
+                      ref={(el) => (videoRefs.current[index] = el)}
+                      src={item.src}
+                      width="100%"
+                      height={0}
+                      style={{ height: "auto" }}
+                      autoPlay
+                      muted={mutedStates[index]}
+                      loop
+                    />
+                    {item.type != 'video_no_sound' && (
+                      <Image
+                        src={mutedStates[index] ? "/resources/icon_without_sound.png" : "/resources/icon_with_sound.png"}
+                        alt="Mute/Unmute"
+                        className="cursor-pointer"
+                        width={40}
+                        height={40}
+                        onClick={() => handleToggleMute(index)}
+                      />
+                    )}
+                  </div>
                 ) : null}
               </div>
             ))}

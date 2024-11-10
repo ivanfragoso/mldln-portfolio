@@ -111,9 +111,9 @@ export const projects = [
         sliderItems: [
             { type: 'image', src: '/cigarrettes/slider/cigarrettes_1.jpg' },
             { type: 'video', src: '/cigarrettes/slider/cigarrettes_2.mp4' },
-            { type: 'video', src: '/cigarrettes/slider/cigarrettes_3.mp4' },
+            { type: 'video_no_sound', src: '/cigarrettes/slider/cigarrettes_3.mp4' },
             { type: 'image', src: '/cigarrettes/slider/cigarrettes_4.jpg' },
-            { type: 'video', src: '/cigarrettes/slider/cigarrettes_5.mp4' },
+            { type: 'video_no_sound', src: '/cigarrettes/slider/cigarrettes_5.mp4' },
         ],
         description: CigarrettesDescription
     },
