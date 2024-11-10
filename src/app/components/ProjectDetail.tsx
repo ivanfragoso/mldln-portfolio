@@ -32,7 +32,11 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
     if (videoRefs.current[index]) {
       videoRefs.current[index]!.muted = newMutedStates[index];
     }
-  }  
+  } 
+
+  const setVideoRef = (element: HTMLVideoElement | null, index: number) => {
+    videoRefs.current[index] = element;
+  };
 
   return (
     <section className="h-full">
@@ -55,7 +59,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
                 ) : item.type === 'video' || item.type === 'video_no_sound' ? (
                   <div className="relative h-screen flex flex-col justify-center gap-2 items-end">
                     <video
-                      ref={(el) => (videoRefs.current[index] = el)}
+                      ref={(el) => setVideoRef(el, index)}
                       src={item.src}
                       width="100%"
                       height={0}
