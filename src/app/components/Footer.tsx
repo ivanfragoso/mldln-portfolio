@@ -1,7 +1,11 @@
-export default function Footer() {
+interface FooterProps {
+    onNameClick: () => void
+}
+
+export default function Footer({ onNameClick }: FooterProps) {
     return (
         <footer className="flex px-5 mb-16">
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center cursor-pointer" onClick={onNameClick}>
                 <h3 className="font-editorialNew text-[2rem] italic text-primary mb-3.5 leading-8">Marta López de la Nieta</h3>
                 <p className="text-[0.5rem]">Este portfolio se presenta con fines educativos y no comerciales. Todos los derechos pertenecen a sus respectivos autores.</p>
             </div>
