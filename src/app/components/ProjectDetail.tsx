@@ -23,7 +23,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
     slidesToShow: 1,
     slidesToScroll: 1,
     touchMove: true,
-    lazyLoad: 'ondemand'
+    lazyLoad: 'ondemand' as const
   }
 
   const handleToggleMute = (index: number) => {
