@@ -13,7 +13,7 @@ const La111Description = `
             <li>Photoshop</li>
             <li>Figma</li>
         </ul>
-        <ul class="text-low_opac">
+        <ul class="text-super_low_opac">
             <li>In collab with:</li>
             <li>Anna Padrós</li>
             <li>Aindrea Evangelista</li>

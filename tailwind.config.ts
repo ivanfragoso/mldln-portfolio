@@ -12,6 +12,7 @@ const config: Config = {
         primary: "#2531d6",
         secondary: "#1c1c1c",
         low_opac: "#B5B4B4",
+        super_low_opac: "#D2D2D2",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

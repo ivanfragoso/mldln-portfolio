@@ -11,7 +11,7 @@ const AetheriaDescription = `
             <li>Photoshop</li>
             <li>Illustrator</li>
         </ul>
-        <ul class="text-low_opac">
+        <ul class="text-super_low_opac">
             <li>In collab with:</li>
             <li>Naiara Martínez</li>
         </ul>
