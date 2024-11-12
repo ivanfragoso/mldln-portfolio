@@ -21,7 +21,9 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    touchMove: true,
+    lazyLoad: 'ondemand'
   }
 
   const handleToggleMute = (index: number) => {
@@ -54,7 +56,6 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
                     width={800}
                     height={0}
                     style={{ height: '100vh', objectFit: 'cover' }}
-                    priority
                   />
                 ) : item.type === 'video' || item.type === 'video_no_sound' ? (
                   <div className="relative h-screen flex flex-col justify-center gap-2 items-end">
@@ -76,6 +77,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
                         width={40}
                         height={40}
                         onClick={() => handleToggleMute(index)}
+                        loading="lazy"
                       />
                     )}
                   </div>
