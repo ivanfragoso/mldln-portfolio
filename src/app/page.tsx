@@ -41,7 +41,6 @@ export default function Home() {
           />
         </div>
         <div className="w-[568px] ml-auto h-full overflow-y-scroll z-30">
-          <h3 className="float-right mr-6 text-lg mt-5 font-editorialNew italic">Work</h3>
           <div className="flex flex-col gap-[80px] px-[80px] mt-16 mb-[190px]">
             {projects.map((project, idx) => (
               <Project key={project.number} {...project} imageClick={() => { setAnimateBg((animateBg) => !animateBg); setSelectedProjectIndex(idx)}} />
