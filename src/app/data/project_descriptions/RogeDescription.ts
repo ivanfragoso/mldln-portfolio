@@ -27,7 +27,10 @@ const RogeDescription =
         <div class="mb-3 ml-[75px] leading-3.5">
             <span>comida</span> / <span>la personalidad de mi yaya</span> / <span>posters</span>
         </div>
-        <p class="text-right mb-3 ml-[301px] leading-3.5">Objeto del archivo FoodCultura</p>
+        <div class="relative mb-3 ml-[301px]  inline-block group">
+            <p class="text-right text-black leading-3.5">Objeto del archivo FoodCultura</p>
+            <img src="/roge/roge_hover_food_culture.jpg" alt="Imagen al hacer hover" class="absolute top-0 left-1/2 transform -translate-x-1/2 hidden group-hover:block">
+        </div>
         <p class="leading-3.5">
             Como resultado, nace un conjunto de posters que comunican la identidad de una <br>
             panadería la cual utiliza dichos (propios de mi yaya) como claim.
@@ -47,7 +50,10 @@ const RogeDescription =
         <div class="mb-3 mr-[75px] leading-3.5">
             <span>food</span> / <span>my grandmother's personality</span> / <span>posters</span>
         </div>
-        <p class="mb-3 mr-[262px] leading-3.5">Object of the FoodCultura archive</p>
+        <div class="relative mb-3 mr-[262px] inline-block group">
+            <p class="text-black leading-3.5">Object of the FoodCultura archive</p>
+            <img src="/roge/roge_hover_food_culture.jpg" alt="Imagen al hacer hover" class="absolute top-0 left-1/2 transform -translate-x-1/2 hidden group-hover:block">
+        </div>
         <p class="leading-3.5">
             As a result, a set of posters was created that communicate the identity of a bakery, <br>
             which uses sayings (unique to my grandmother) as its tagline.
