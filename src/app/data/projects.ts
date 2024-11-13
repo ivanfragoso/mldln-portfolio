@@ -34,7 +34,7 @@ export const projects = [
     },
     {
         number: "02",
-        title: "LeSille",
+        title: "Le Sille",
         image: "/le_sille/le_sille_cover.jpg",
         firstLineTags: [
             { text: "Card Game - Educative", margin: "m-0" },
