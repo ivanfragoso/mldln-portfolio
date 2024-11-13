@@ -20,6 +20,9 @@ const config: Config = {
         blurweb: ['var(--font-blur-web)'],
         editorialNew: ['var(--font-editorial-new)'],
       },
+      leading: {
+        '3.5': '0.875rem', /* 14px */
+      }
     },
   },
   plugins: [],

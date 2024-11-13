@@ -42,7 +42,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
 
   return (
     <section className="h-full">
-      <h3 className="float-right mr-6 text-lg mt-5 font-editorialNew italic cursor-pointer" onClick={backClick}>(more)</h3>
+      <h3 className="absolute right-0 top-0 mt-5 mr-6 text-lg font-editorialNew italic cursor-pointer" onClick={backClick}>(more)</h3>
       <div className="h-full flex">
         <div className="w-[640px] h-full relative">
           <Slider {...settings}>
@@ -86,9 +86,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
             ))}
           </Slider>
         </div>
-        <div className="w-[640px] py-5 px-[30px]">
-          {<div dangerouslySetInnerHTML={{ __html: description }} />}
-        </div>
+        {<div className="w-[640px] py-5 px-[30px]" dangerouslySetInnerHTML={{ __html: description }} />}
       </div>
     </section>
   );
