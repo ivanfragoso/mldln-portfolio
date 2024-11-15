@@ -27,7 +27,9 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
     slidesToScroll: 1,
     touchMove: true,
     lazyLoad: "ondemand" as const,
-    beforeChange: (_, next: number) => {
+
+    // eslint-disable-next-line no-unused-vars
+    beforeChange: () => {
       setPlayingIndex(null);
     },
     afterChange: (index: number) => {
@@ -88,6 +90,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
                         className="cursor-pointer"
                         width={40}
                         height={40}
+                        style={{ width: "auto", height: "auto" }}
                         onClick={() => handleToggleMute(index)}
                         loading="lazy"
                       />
