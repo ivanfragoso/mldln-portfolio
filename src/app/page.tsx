@@ -33,7 +33,7 @@ export default function Home() {
             <h3 className="text-5xl text-background uppercase font-blurweb">Specializing in Branding & Visual Identity</h3>
           </div>
           <video
-            src="/home_video.mp4"
+            src="https://videos.martalopezdelanieta.com/home_video.mp4"
             autoPlay
             muted
             loop
