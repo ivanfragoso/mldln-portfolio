@@ -19,8 +19,8 @@ export const projects = [
             { text: "Methodology", margin: "mr-[19px]" }
         ],
         sliderItems: [
-            { type: 'video', src: '/roge_1.mp4' },
-            { type: 'video', src: '/roge_2.mp4' },
+            { type: 'video', src: 'https://videos.martalopezdelanieta.com/roge_1.mp4' },
+            { type: 'video', src: 'https://videos.martalopezdelanieta.com/roge_2.mp4' },
             { type: 'image', src: '/roge/slider/roge_3.jpg' },
             { type: 'image', src: '/roge/slider/roge_4.jpg' },
             { type: 'image', src: '/roge/slider/roge_5.jpg' },
@@ -110,10 +110,10 @@ export const projects = [
         ],
         sliderItems: [
             { type: 'image', src: '/cigarrettes/slider/cigarrettes_1.jpg' },
-            { type: 'video', src: '/cigarrettes_1.mp4' },
-            { type: 'video_no_sound', src: '/cigarrettes_2.mp4' },
+            { type: 'video', src: 'https://videos.martalopezdelanieta.com/cigarrettes_1.mp4' },
+            { type: 'video_no_sound', src: 'https://videos.martalopezdelanieta.com/cigarrettes_2.mp4' },
             { type: 'image', src: '/cigarrettes/slider/cigarrettes_4.jpg' },
-            { type: 'video_no_sound', src: '/cigarrettes_3.mp4' },
+            { type: 'video_no_sound', src: 'https://videos.martalopezdelanieta.com/cigarrettes_3.mp4' },
         ],
         description: CigarrettesDescription
     },
