@@ -110,10 +110,10 @@ export const projects = [
         ],
         sliderItems: [
             { type: 'image', src: '/cigarrettes/slider/cigarrettes_1.jpg' },
-            { type: 'video', src: 'https://videos.martalopezdelanieta.com/cigarrettes_1.mp4' },
-            { type: 'video_no_sound', src: 'https://videos.martalopezdelanieta.com/cigarrettes_2.mp4' },
-            { type: 'image', src: '/cigarrettes/slider/cigarrettes_4.jpg' },
+            { type: 'video', src: 'https://videos.martalopezdelanieta.com/cigarrettes_2.mp4' },
             { type: 'video_no_sound', src: 'https://videos.martalopezdelanieta.com/cigarrettes_3.mp4' },
+            { type: 'image', src: '/cigarrettes/slider/cigarrettes_4.jpg' },
+            { type: 'video_no_sound', src: 'https://videos.martalopezdelanieta.com/cigarrettes_5.mp4' },
         ],
         description: CigarrettesDescription
     },
