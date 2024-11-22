@@ -12,6 +12,24 @@ interface ProjectDetailProps {
   nextProjectClick: () => void;
 }
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={className} style={{ ...style, display: "block" }} onClick={onClick}>
+      <Image src="/resources/next_arrow.svg" alt="next project" width={14} height={24} />
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={className} style={{ ...style, display: "block" }} onClick={onClick}>
+      <Image src="/resources/prev_arrow.svg" alt="previous project" width={14} height={24} />
+    </div>
+  );
+}
+
 export default function ProjectDetail({
   backClick,
   nextProjectClick,
@@ -25,15 +43,15 @@ export default function ProjectDetail({
 
   const settings = {
     dots: true,
-    dotsClass: "slick-dots",
-    arrows: false,
+    dotsClass: "slick-dots !-bottom-[35px]",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     touchMove: true,
     lazyLoad: "ondemand" as const,
-
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     beforeChange: () => {
       setPlayingIndex(null);
     },
@@ -114,6 +132,10 @@ export default function ProjectDetail({
           </Slider>
         </div>
         <div className="w-[640px] h-[774px]" dangerouslySetInnerHTML={{ __html: description }} />
+      </div>
+      <div className="flex flex-col justify-start items-end ml-auto">
+        <a href="mailto:marta.00.design@gmail.com" className="text-xl uppercase font-blurweb leading-5 text-low_opac">Hit Me Up!</a>
+        <a href="mailto:marta.00.design@gmail.com" className="text-xs font-blurweb text-low_opac">marta.00.design@gmail.com</a>
       </div>
     </section>
   );

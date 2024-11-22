@@ -93,15 +93,30 @@ body, html {
 }
 
 .project-detail__container {
-  .slick-slide {
-    @apply !flex justify-center items-center;
-  }
-
-  .slick-track .slick-slide {
-    @apply !flex items-center;
-  }
-  
   .slick-list .slick-slide {
     @apply !flex h-[774px] items-center;
   }
+  
+  .slick-arrow.slick-next {
+    @apply -right-0;
+
+    &::before {
+      @apply hidden;
+    }
+  }
+
+  .slick-arrow.slick-prev {
+    @apply left-1.5 z-10;
+
+    &::before {
+      @apply hidden;
+    }
+  }
+
+  .slick-dots {
+    li {
+      @apply !m-0;
+    }
+  }
 }
+
