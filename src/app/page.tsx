@@ -23,6 +23,12 @@ export default function Home() {
     }
   };
 
+  const handleNextProjectClick = () => {
+    setAnimateBg((animateBg) => !animateBg);
+    setSelectedProjectIndex((prevIndex) => (prevIndex + 1) % projects.length);
+    setTimeout(() => setAnimateBg((animateBg) => !animateBg), 500);
+  };
+
   return (
     <main className="h-screen w-full relative">
       <div className={`h-full flex ${animateBg ? "bounce" : "bounce-out"} bg-background z-20`}>
@@ -58,6 +64,7 @@ export default function Home() {
         <ProjectDetail
           sliderItems={projects[selectedProjectIndex].sliderItems}
           backClick={() => setAnimateBg((animateBg) => !animateBg)}
+          nextProjectClick={handleNextProjectClick}
           description={projects[selectedProjectIndex].description}
         />
       )}

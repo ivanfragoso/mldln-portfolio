@@ -9,9 +9,15 @@ interface ProjectDetailProps {
   sliderItems: { type: string; src: string }[];
   description: string;
   backClick: () => void;
+  nextProjectClick: () => void;
 }
 
-export default function ProjectDetail({ backClick, sliderItems, description }: ProjectDetailProps) {
+export default function ProjectDetail({
+  backClick,
+  nextProjectClick,
+  sliderItems,
+  description,
+}: ProjectDetailProps) {
   const [mutedStates, setMutedStates] = useState<boolean[]>(sliderItems.map(() => true));
   const [playingIndex, setPlayingIndex] = useState<number | null>(
     sliderItems[0]?.type === "video" ? 0 : null
@@ -28,7 +34,6 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
     touchMove: true,
     lazyLoad: "ondemand" as const,
 
-    // eslint-disable-next-line no-unused-vars
     beforeChange: () => {
       setPlayingIndex(null);
     },
@@ -52,9 +57,15 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
       <div className="flex justify-between w-full pb-[21px]">
         <button
           className="text-[20px] font-editorialNew italic cursor-pointer leading-3"
-        onClick={backClick}
-      >
+          onClick={backClick}
+        >
           (home)
+        </button>
+        <button
+          className="text-[20px] font-editorialNew italic cursor-pointer"
+          onClick={nextProjectClick}
+        >
+          (next project)
         </button>
       </div>
       <div className="w-full flex justify-center items-center">
