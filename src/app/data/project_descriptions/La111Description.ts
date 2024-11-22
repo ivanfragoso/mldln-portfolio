@@ -21,7 +21,7 @@ const La111Description = `
     </div>
     <div class="text-xs mb-12">
         <span class="block font-bold mb-[10px]">ESP</span>
-        <p class="mb-3.5 w-[321px] text-right leading-3.5">
+        <p class="mb-3.5 w-[321px] text-right leading-3.5 font-medium">
             La111 es una cooperativa de vivienda autogestionada buscando <br>
             la colaboración, la igualdad y la vida consciente.
         </p>
@@ -41,7 +41,7 @@ const La111Description = `
     </div>
     <div class="text-xs text-right text-low_opac">
         <span class="block font-bold mb-[10px]">ENG</span>
-        <p class="mb-3.5 w-[289px] text-left ml-auto leading-3.5">
+        <p class="mb-3.5 w-[289px] text-left ml-auto leading-3.5 font-medium">
             La111 is a self-managed housing cooperative focused on <br>
             collaboration, equality, and conscious living.
         </p>

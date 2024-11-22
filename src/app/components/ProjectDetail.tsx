@@ -19,7 +19,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
 
   const settings = {
     dots: true,
-    dotsClass: "slick-dots !bottom-4",
+    dotsClass: "slick-dots",
     arrows: false,
     infinite: true,
     speed: 500,
@@ -48,32 +48,34 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
   };
 
   return (
-    <section className="h-full">
-      <h3
-        className="absolute right-0 top-0 mt-5 mr-6 text-lg font-editorialNew italic cursor-pointer"
+    <section className="h-full flex flex-col justify-center items-center project-detail__container">
+      <div className="flex justify-between w-full pb-[21px]">
+        <button
+          className="text-[20px] font-editorialNew italic cursor-pointer leading-3"
         onClick={backClick}
       >
-        (more)
-      </h3>
-      <div className="h-full flex">
-        <div className="w-[640px] h-full relative">
+          (home)
+        </button>
+      </div>
+      <div className="w-full flex justify-center items-center">
+        <div className="w-[543px] mr-[80px] h-[774px]">
           <Slider {...settings}>
             {sliderItems.map((item, index) => (
-              <div key={index} className="h-full">
+              <div key={index}>
                 {item.type === "image" ? (
                   <Image
                     src={item.src}
                     alt="test"
                     width={800}
                     height={0}
-                    style={{ height: "100vh", objectFit: "cover" }}
+                    className="h-full object-cover"
                   />
                 ) : item.type === "video" || item.type === "video_no_sound" ? (
-                  <div className="relative h-screen flex flex-col justify-center gap-2 items-end">
+                  <div className="relative h-full flex flex-col justify-end items-end">
                     <ReactPlayer
                       url={item.src}
                       width="100%"
-                      height="auto"
+                      height="100%"
                       playing={playingIndex === index}
                       muted={mutedStates[index]}
                       loop
@@ -87,10 +89,9 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
                             : "/resources/icon_with_sound.png"
                         }
                         alt="Mute/Unmute"
-                        className="cursor-pointer"
+                        className="cursor-pointer mt-2"
                         width={40}
                         height={40}
-                        style={{ width: "auto", height: "auto" }}
                         onClick={() => handleToggleMute(index)}
                         loading="lazy"
                       />
@@ -101,7 +102,7 @@ export default function ProjectDetail({ backClick, sliderItems, description }: P
             ))}
           </Slider>
         </div>
-        <div className="w-[640px] py-5 px-[30px]" dangerouslySetInnerHTML={{ __html: description }} />
+        <div className="w-[640px] h-[774px]" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
     </section>
   );

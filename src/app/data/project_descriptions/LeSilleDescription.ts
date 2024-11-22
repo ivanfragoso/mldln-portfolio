@@ -18,7 +18,7 @@ const LeSilleDescription = `
             El proyecto se centra en profundizar sobre la definición del diseño escandinavo, los <br>
             representantes más relevantes y las piezas más emblemáticas.
         </p>
-        <p class="w-[359px] mb-3.5 text-right leading-3.5">
+        <p class="w-[359px] mb-3.5 text-right leading-3.5 font-medium">
             El juego de cartas integra de manera lúdica <br>
             del diseño de mobiliario.
         </p>
@@ -28,7 +28,7 @@ const LeSilleDescription = `
             te ha otorgado. Eso, lo consigues mediante unas cartas de pistas, 4 pistas por silla.
         </p>
         <div class="ml-[75px] mb-3.5 leading-3.5">
-            <span>6 cartas de diseñador</span> / <span>24 cartas de sillas</span> / <span>96 cartas de pistas</span>
+            <span class="font-medium">6 cartas de diseñador</span> / <span>24 cartas de sillas</span> / <span>96 cartas de pistas</span>
         </div>
         <p class="w-[434px] text-right leading-3.5">
             Los colores fueron extraídos de paletas relacionadas con diseño escandinavo <br>
@@ -42,7 +42,7 @@ const LeSilleDescription = `
             The project focuses on delving into the definition of Scandinavian design, its most re- <br>
             levant representatives, and the most iconic pieces.
         </p>
-        <p class="w-[362px] mb-3.5 leading-3.5 text-left ml-auto">
+        <p class="w-[362px] mb-3.5 leading-3.5 text-left ml-auto font-medium">
             The card game playfully incorporates content related to <br>
             furniture design.
         </p>
@@ -52,7 +52,7 @@ const LeSilleDescription = `
             assigned. You achieve this by using clue cards, with 4 clues per chair.
         </p>
         <div class="mr-[35px] mb-3.5 leading-3.5">
-            <span>6 designer cards</span> / <span>24 chair cards</span> / <span>96 clue cards</span>
+            <span class="font-medium">6 designer cards</span> / <span>24 chair cards</span> / <span>96 clue cards</span>
         </div>
         <p class="w-[432px] text-left ml-auto leading-3.5">
             The colors were extracted from palettes related to Scandinavian design, adding <br>

@@ -84,3 +84,24 @@ body, html {
     transform: translateY(100vh);
   }
 }
+
+@supports (height: 100dvh) {
+  .project-detail__container {
+      padding-top: min(35px, calc((100dvh - 774px) / 2));
+      padding-bottom: min(72px, calc((100dvh - 774px) / 2));
+  }
+}
+
+.project-detail__container {
+  .slick-slide {
+    @apply !flex justify-center items-center;
+  }
+
+  .slick-track .slick-slide {
+    @apply !flex items-center;
+  }
+  
+  .slick-list .slick-slide {
+    @apply !flex h-[774px] items-center;
+  }
+}

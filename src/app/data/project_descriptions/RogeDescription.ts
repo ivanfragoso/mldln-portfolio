@@ -22,13 +22,13 @@ const RogeDescription =
             un proyecto final que se ciñe a los conceptos dados.
         </p>
         <div class="ml-[75px] mb-3 leading-3.5">
-            <span>placer</span> / <span>memes</span> / <span>publicidad</span>
+            <span class="font-medium">placer</span> / <span>memes</span> / <span>publicidad</span>
         </div>
         <div class="mb-3 ml-[75px] leading-3.5">
-            <span>comida</span> / <span>la personalidad de mi yaya</span> / <span>posters</span>
+            <span class="font-medium">comida</span> / <span>la personalidad de mi yaya</span> / <span>posters</span>
         </div>
         <div class="relative mb-3 ml-[301px]  inline-block group">
-            <p class="text-right text-black leading-3.5">Objeto del archivo FoodCultura</p>
+            <p class="text-right text-black leading-3.5 font-medium">Objeto del archivo FoodCultura</p>
             <img src="/roge/roge_hover_food_culture.jpg" alt="Imagen al hacer hover" class="absolute top-0 left-1/2 transform -translate-x-1/2 hidden group-hover:block">
         </div>
         <p class="leading-3.5">
@@ -45,13 +45,13 @@ const RogeDescription =
             chance.
         </p>
         <div class="mr-[75px] mb-3 leading-3.5">
-            <span>pleasure</span> / <span>memes</span> / <span>advertising</span>
+            <span class="font-medium">pleasure</span> / <span>memes</span> / <span>advertising</span>
         </div>
         <div class="mb-3 mr-[75px] leading-3.5">
-            <span>food</span> / <span>my grandmother's personality</span> / <span>posters</span>
+            <span class="font-medium">food</span> / <span>my grandmother's personality</span> / <span>posters</span>
         </div>
         <div class="relative mb-3 mr-[262px] inline-block group">
-            <p class="text-black leading-3.5">Object of the FoodCultura archive</p>
+            <p class="text-black leading-3.5 font-medium">Object of the FoodCultura archive</p>
             <img src="/roge/roge_hover_food_culture.jpg" alt="Imagen al hacer hover" class="absolute top-0 left-1/2 transform -translate-x-1/2 hidden group-hover:block">
         </div>
         <p class="leading-3.5">
