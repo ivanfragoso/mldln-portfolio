@@ -1,5 +1,5 @@
 const La111Description = `
-    <div class="text-xs flex mb-[95px] gap-[75px]">
+    <div class="text-xs flex mb-[45px] gap-[75px]">
         <ul>
             <li>Brand Identity</li>
             <li>Social Media</li> 

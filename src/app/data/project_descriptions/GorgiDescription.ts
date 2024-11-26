@@ -1,5 +1,5 @@
 const GorgiDescription = `
-    <div class="text-xs flex mb-[95px] gap-[75px]">
+    <div class="text-xs flex mb-[45px] gap-[75px]">
         <ul>
             <li>Wine Label</li>
             <li>Illustration</li> 

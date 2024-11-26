@@ -1,5 +1,5 @@
 const RogeDescription = 
-    `<div class="text-xs flex mb-[95px] gap-[75px]">
+    `<div class="text-xs flex mb-[45px] gap-[75px]">
         <ul>
             <li>Brand Identity</li>
             <li>Branding</li>
