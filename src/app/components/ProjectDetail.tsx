@@ -12,24 +12,6 @@ interface ProjectDetailProps {
   nextProjectClick: () => void;
 }
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div className={className} style={{ ...style, display: "block" }} onClick={onClick}>
-      <Image src="/resources/next_arrow.svg" alt="next project" width={14} height={24} />
-    </div>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div className={className} style={{ ...style, display: "block" }} onClick={onClick}>
-      <Image src="/resources/prev_arrow.svg" alt="previous project" width={14} height={24} />
-    </div>
-  );
-}
-
 export default function ProjectDetail({
   backClick,
   nextProjectClick,
@@ -43,15 +25,14 @@ export default function ProjectDetail({
 
   const settings = {
     dots: true,
-    dotsClass: "slick-dots !-bottom-[35px]",
+    dotsClass: "slick-dots !-bottom-7",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     touchMove: true,
     lazyLoad: "ondemand" as const,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    arrows: true,
     beforeChange: () => {
       setPlayingIndex(null);
     },
@@ -71,8 +52,8 @@ export default function ProjectDetail({
   };
 
   return (
-    <section className="h-full flex flex-col justify-center items-center project-detail__container">
-      <div className="flex justify-between w-full pb-[21px]">
+    <section className="h-screen flex flex-col justify-center items-center project-detail__container">
+      <div className="flex justify-between w-full pb-[6px]">
         <button
           className="text-[20px] font-editorialNew italic cursor-pointer leading-3"
           onClick={backClick}
@@ -86,25 +67,25 @@ export default function ProjectDetail({
           (next project)
         </button>
       </div>
-      <div className="w-full flex justify-center items-center">
-        <div className="w-[543px] mr-[80px] h-[774px]">
+      <div className="w-full flex">
+        <div className="w-[543px] mr-[80px]">
           <Slider {...settings}>
             {sliderItems.map((item, index) => (
-              <div key={index}>
+              <div key={index} className="h-full">
                 {item.type === "image" ? (
                   <Image
                     src={item.src}
                     alt="test"
                     width={800}
                     height={0}
-                    className="h-full object-cover"
+                    style={{ height: "85vh", objectFit: "cover" }}
                   />
                 ) : item.type === "video" || item.type === "video_no_sound" ? (
-                  <div className="relative h-full flex flex-col justify-end items-end">
+                  <div className="relative h-[85vh] flex flex-col justify-center items-end">
                     <ReactPlayer
                       url={item.src}
                       width="100%"
-                      height="100%"
+                      height="auto"
                       playing={playingIndex === index}
                       muted={mutedStates[index]}
                       loop
@@ -131,7 +112,7 @@ export default function ProjectDetail({
             ))}
           </Slider>
         </div>
-        <div className="w-[640px] h-[774px]" dangerouslySetInnerHTML={{ __html: description }} />
+        <div className="grow h-auto" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       <div className="flex flex-col justify-start items-end ml-auto">
         <a href="mailto:marta.00.design@gmail.com" className="text-xl uppercase font-blurweb leading-5 text-low_opac">Hit Me Up!</a>

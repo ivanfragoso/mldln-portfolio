@@ -85,38 +85,19 @@ body, html {
   }
 }
 
-@supports (height: 100dvh) {
-  .project-detail__container {
-      padding-top: min(35px, calc((100dvh - 774px) / 2));
-      padding-bottom: min(72px, calc((100dvh - 774px) / 2));
-  }
-}
-
 .project-detail__container {
-  .slick-list .slick-slide {
-    @apply !flex h-[774px] items-center;
-  }
-  
-  .slick-arrow.slick-next {
-    @apply -right-0;
-
-    &::before {
-      @apply hidden;
-    }
-  }
-
-  .slick-arrow.slick-prev {
-    @apply left-1.5 z-10;
-
-    &::before {
-      @apply hidden;
-    }
-  }
-
   .slick-dots {
     li {
       @apply !m-0;
     }
+  }
+
+  .slick-prev {
+    @apply z-10 left-1;
+  }
+
+  .slick-next {
+    @apply z-10 right-1;
   }
 }
 
