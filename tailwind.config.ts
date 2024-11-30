@@ -24,7 +24,7 @@ const config: Config = {
         '3.5': '0.875rem', /* 14px */
       },
       height: {
-        'slider': '730px'
+        'slider': '750px'
       }
     },
   },
