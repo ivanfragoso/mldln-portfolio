@@ -33,10 +33,11 @@ export default function Home() {
     <main className="h-screen w-full relative">
       <div className={`h-full flex ${animateBg ? "bounce" : "bounce-out"} bg-background z-20`}>
         <div className="w-[712px] h-full sticky top-0 z-30">
+          <a href="mailto:marta.00.design@gmail.com" className="text-[15px] text-background font-blurweb absolute top-8 left-8 right-0 z-10">marta.00.design@gmail.com</a>
           <div className="absolute bottom-0 left-0 right-0 mb-[50px] ml-[25px] z-10 cursor-pointer" onClick={handleToggleAbout}>
             <h1 className="text-6xl text-primary font-editorialNew italic">López de la Nieta</h1>
             <h2 className="text-6xl text-background uppercase -mt-5 font-blurweb">Graphic Designer</h2>
-            <h3 className="text-5xl text-background uppercase font-blurweb">Specializing in Branding & Visual Identity</h3>
+            <h3 className="text-5xl text-background uppercase font-blurweb">Specializing in Branding <br></br>& Visual Identity</h3>
           </div>
           <video
             src="https://videos.martalopezdelanieta.com/home_video.mp4"
