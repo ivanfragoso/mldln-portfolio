@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
 
 interface ProjectDetailProps {
@@ -22,6 +22,7 @@ export default function ProjectDetail({
   const [playingIndex, setPlayingIndex] = useState<number | null>(
     sliderItems[0]?.type === "video" ? 0 : null
   );
+  const playerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const settings = {
     dots: true,
@@ -49,6 +50,17 @@ export default function ProjectDetail({
       newStates[index] = !newStates[index];
       return newStates;
     });
+  };  
+
+  const handleFullscreen = (index: number) => {
+    const playerContainer = playerRefs.current[index];
+    if (playerContainer) {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else {
+        playerContainer.requestFullscreen();
+      }
+    }
   };
 
   return (
@@ -81,7 +93,8 @@ export default function ProjectDetail({
                     className="h-slider"
                   />
                 ) : item.type === "video" || item.type === "video_no_sound" ? (
-                  <div className="relative flex flex-col justify-center items-end h-full">
+                  // @ts-expect-error: suppressing type error due to incorrect type inference in the ref callback
+                  <div ref={(el) => (playerRefs.current[index] = el)} className="relative flex flex-col justify-center items-end h-full">
                     <ReactPlayer
                       url={item.src}
                       width="100%"
@@ -91,21 +104,32 @@ export default function ProjectDetail({
                       loop
                       controls={false}
                     />
-                    {item.type !== "video_no_sound" && (
+                    <div className="flex gap-2">
+                      {item.type !== "video_no_sound" && (
+                        <Image
+                          src={
+                            mutedStates[index]
+                              ? "/resources/icon_without_sound.png"
+                              : "/resources/icon_with_sound.png"
+                          }
+                          alt="Mute/Unmute"
+                          className="cursor-pointer mt-2"
+                          width={40}
+                          height={40}
+                          onClick={() => handleToggleMute(index)}
+                          loading="lazy"
+                        />
+                      )}
                       <Image
-                        src={
-                          mutedStates[index]
-                            ? "/resources/icon_without_sound.png"
-                            : "/resources/icon_with_sound.png"
-                        }
+                        src={"/resources/icon_fullscreen.svg"}
                         alt="Mute/Unmute"
                         className="cursor-pointer mt-2"
-                        width={40}
-                        height={40}
-                        onClick={() => handleToggleMute(index)}
+                        width={20}
+                        height={20}
+                        onClick={() => handleFullscreen(index)}
                         loading="lazy"
                       />
-                    )}
+                    </div>
                   </div>
                 ) : null}
               </div>
