@@ -25,7 +25,7 @@ export default function ProjectDetail({
 
   const settings = {
     dots: true,
-    dotsClass: "slick-dots !-bottom-7",
+    dotsClass: "slick-dots !-bottom-8",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -52,7 +52,7 @@ export default function ProjectDetail({
   };
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center project-detail__container">
+    <section className="h-full flex flex-col justify-center items-center project-detail__container">
       <div className="flex justify-between w-full pb-[6px]">
         <button
           className="text-[20px] font-editorialNew italic cursor-pointer leading-3"
@@ -69,7 +69,7 @@ export default function ProjectDetail({
       </div>
       <div className="w-full flex">
         <div className="w-[543px] mr-[80px]">
-          <Slider {...settings}>
+          <Slider {...settings} className="h-slider">
             {sliderItems.map((item, index) => (
               <div key={index} className="h-full">
                 {item.type === "image" ? (
@@ -78,10 +78,10 @@ export default function ProjectDetail({
                     alt="test"
                     width={800}
                     height={0}
-                    style={{ height: "85vh", objectFit: "cover" }}
+                    className="h-slider"
                   />
                 ) : item.type === "video" || item.type === "video_no_sound" ? (
-                  <div className="relative h-[85vh] flex flex-col justify-center items-end">
+                  <div className="relative flex flex-col justify-center items-end h-full">
                     <ReactPlayer
                       url={item.src}
                       width="100%"
@@ -112,7 +112,7 @@ export default function ProjectDetail({
             ))}
           </Slider>
         </div>
-        <div className="grow h-auto" dangerouslySetInnerHTML={{ __html: description }} />
+        <div className="grow h-full" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       <div className="flex flex-col justify-start items-end ml-auto">
         <a href="mailto:marta.00.design@gmail.com" className="text-xl uppercase font-blurweb leading-5 text-low_opac">Hit Me Up!</a>

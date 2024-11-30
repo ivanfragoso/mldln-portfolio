@@ -18,7 +18,7 @@ const RogeDescription =
         <span class="block font-bold mb-3">ESP</span>
         <p class="mb-3 leading-3.5">
             A través del azar y del archivo de Antoni Miralda y Montse Guillén (FoodCultura) <br>
-            se desarrolló un brief parael cuál trata el método y la experimentación para terminar creando <br>
+            se desarrolló un brief para el cuál trata el método y la experimentación para terminar creando <br>
             un proyecto final que se ciñe a los conceptos dados.
         </p>
         <div class="ml-[75px] mb-3 leading-3.5">

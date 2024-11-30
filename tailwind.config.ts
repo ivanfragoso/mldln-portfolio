@@ -22,6 +22,9 @@ const config: Config = {
       },
       leading: {
         '3.5': '0.875rem', /* 14px */
+      },
+      height: {
+        'slider': '730px'
       }
     },
   },
