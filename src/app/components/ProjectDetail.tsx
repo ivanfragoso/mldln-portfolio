@@ -104,7 +104,7 @@ export default function ProjectDetail({
                       loop
                       controls={false}
                     />
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 -mt-7 mr-1">
                       {item.type !== "video_no_sound" && (
                         <Image
                           src={
@@ -113,7 +113,7 @@ export default function ProjectDetail({
                               : "/resources/icon_with_sound.png"
                           }
                           alt="Mute/Unmute"
-                          className="cursor-pointer mt-2"
+                          className="cursor-pointer z-20"
                           width={40}
                           height={40}
                           onClick={() => handleToggleMute(index)}
@@ -123,7 +123,7 @@ export default function ProjectDetail({
                       <Image
                         src={"/resources/icon_fullscreen.svg"}
                         alt="Mute/Unmute"
-                        className="cursor-pointer mt-2"
+                        className="cursor-pointer z-20"
                         width={20}
                         height={20}
                         onClick={() => handleFullscreen(index)}
