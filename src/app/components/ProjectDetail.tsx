@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 
 interface ProjectDetailProps {
@@ -24,6 +24,37 @@ export default function ProjectDetail({
   );
   const playerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+        e.preventDefault();
+        
+        if (Math.abs(e.deltaX) > 50) {
+          if (e.deltaX < 0) {
+            console.log("entro1")
+            backClick();
+          } else if (e.deltaX > 0) {
+            console.log("entro2")
+            nextProjectClick();
+          }
+        }
+      }
+    };
+
+    const container = document.querySelector('.project-detail__container') as HTMLElement;
+    if (container) {
+      container.addEventListener('wheel', handleWheel as EventListener, { passive: false });
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener('wheel', handleWheel as EventListener);
+      }
+    };
+  }, [backClick, nextProjectClick, sliderItems.length]);
+
+  // Rest of your component remains the same...
+  
   const settings = {
     dots: true,
     dotsClass: "slick-dots !-bottom-8",
